@@ -12,15 +12,10 @@ RUN yum update -y && yum install -y \
     git \
     tar \
     wget \
-    epel-release \
-    blas-devel \
-    lapack-devel && \
+    epel-release && \
   yum group install -y "Development Tools" && \
   yum install -y \
-    zlib-dev \
     openssl-devel \
-    #sqlite-devel \
-    #bzip2-devel && \
   yum clean all
 
 RUN wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz \
@@ -32,9 +27,6 @@ RUN ./configure --prefix=/usr/local \
 && make && make altinstall
 WORKDIR /
 RUN rm -rf Python-3.4.3; rm Python-3.4.3.tar
-
-RUN python3.4 -m pip install pip --upgrade && \
-    python3.4 -m pip install scipy numpy pandas && \
 
 RUN useradd -ms /bin/bash foobar
 USER foobar
