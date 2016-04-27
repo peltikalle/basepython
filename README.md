@@ -1,14 +1,14 @@
-## Instructions
+## About
 
-This repository contains base image containing Centos:7 and Python 3.4.3.
+This image is based on Centos:7 with Python 3.4.3 installed.
 
-You can build your own image with
+You can build your own image by running
 
 ```
 docker build --rm -t <name your image> .
 ```
 
-Or by pulling from dockerhub
+Or pull the image from dockerhub
 
 ```
 docker pull peltikalle/basepython
