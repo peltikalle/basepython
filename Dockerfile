@@ -12,6 +12,7 @@ RUN yum update -y && yum install -y \
     git \
     tar \
     wget \
+    sqlite-devel \
     epel-release && \
   yum group install -y "Development Tools" && \
   yum install -y \
