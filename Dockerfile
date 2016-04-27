@@ -15,7 +15,7 @@ RUN yum update -y && yum install -y \
     epel-release && \
   yum group install -y "Development Tools" && \
   yum install -y \
-    openssl-devel \
+    openssl-devel && \
   yum clean all
 
 RUN wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz \
