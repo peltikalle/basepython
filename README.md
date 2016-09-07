@@ -1,6 +1,6 @@
 ## About
 
-This image is based on Centos:7 with Python 3.4.3 installed.
+This image is based on Centos:7 with Python 3.5.2 installed.
 
 You can build your own image by running
 

@@ -19,15 +19,15 @@ RUN yum update -y && yum install -y \
     openssl-devel && \
   yum clean all
 
-RUN wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz \
-&& xz -d Python-3.4.3.tar.xz \
-&& tar -xvf Python-3.4.3.tar
+RUN wget http://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz \
+&& xz -d Python-3.5.2.tar.xz \
+&& tar -xvf Python-3.5.2.tar
 
-WORKDIR Python-3.4.3
+WORKDIR Python-3.5.2
 RUN ./configure --prefix=/usr/local \
 && make && make altinstall
 WORKDIR /
-RUN rm -rf Python-3.4.3; rm Python-3.4.3.tar
+RUN rm -rf Python-3.5.2; rm Python-3.5.2.tar
 
 RUN useradd -ms /bin/bash foobar
 USER foobar
